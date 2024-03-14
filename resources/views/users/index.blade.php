@@ -70,11 +70,11 @@
                   <tbody>
                     @foreach ($user as $user)
                     <tr class="m-4">
-                      <td class="poppins-regular zw_14 zw_text_333333">{{ $user->CreatedAt }}</td>
-                      <td class="poppins-regular zw_14 zw_text_333333">{{ $user->Lastname }}</td>
-                      <td class="poppins-regular zw_14 zw_text_333333">{{ $user->City }}</td>
-                      <td class="poppins-regular zw_14 zw_text_333333">{{ $user->Email }}</td>
-                      <td class="poppins-regular zw_14 zw_text_333333">{{ $user->Phone }}</td>
+                      <td class="poppins-regular zw_14 zw_text_333333">{{ $user->created_at }}</td>
+                      <td class="poppins-regular zw_14 zw_text_333333">{{ $user->name }}</td>
+                      <td class="poppins-regular zw_14 zw_text_333333">{{ $user->city }}</td>
+                      <td class="poppins-regular zw_14 zw_text_333333">{{ $user->email }}</td>
+                      <td class="poppins-regular zw_14 zw_text_333333">{{ $user->phone }}</td>
                       <td>
                         <form action="{{ route('users.destroy',$user->id) }}" method="POST">
                           <a class="btn zw_btn" href="{{ route('users.show',$user->id) }}">Show</a>

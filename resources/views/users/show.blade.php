@@ -29,27 +29,27 @@
                                 <div class="form-row">
                                     <div class="form-group col-md-6 zw_18 poppins-medium">
                                         <label for="exampleInputFirstname" class="zw_text_AF2245 poppins-bold">Firstname :</label>
-                                        {{ $user->Firstname }}
+                                        {{ $user->name }}
                                     </div>
                                     <div class="form-group col-md-6 zw_18 poppins-medium">
                                         <label for="exampleInputLastname" class="zw_text_AF2245 poppins-bold">Lastname :</label>
-                                        {{ $user->Lastname }}
+                                        {{ $user->lastname }}
                                     </div>
                                 </div>
                                 <div class="form-row">
                                     <div class="form-group col-md-6 zw_18 poppins-medium">
                                         <label for="exampleInputEmail1" class="zw_text_AF2245 poppins-bold">Email :</label>
-                                        {{ $user->Email }}
+                                        {{ $user->email }}
                                     </div>
                                     <div class="form-group col-md-6 zw_18 poppins-medium">
                                         <label for="exampleInputphone" class="zw_text_AF2245 poppins-bold">Phone :</label>
-                                        {{ $user->Phone }}
+                                        {{ $user->phone }}
                                     </div>
                                 </div>
                                 <div class="form-row">
                                     <div class="form-group col-md-6 zw_18 poppins-medium">
                                         <label for="exampleInputCity" class="zw_text_AF2245 poppins-bold">City :</label>
-                                        {{ $user->City }}
+                                        {{ $user->city }}
                                     </div>
                                 </div>
                             </div>

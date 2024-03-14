@@ -13,9 +13,8 @@
         <a href="#" class="nav-link">Contact</a>
       </li>
     </ul>
-
     <!-- Right navbar links -->
-    <ul class="navbar-nav ml-auto">
+    <ul class="navbar-nav hide">
       <!-- Navbar Search -->
       <li class="nav-item">
         <a class="nav-link" data-widget="navbar-search" href="#" role="button">
@@ -133,6 +132,19 @@
           <i class="fas fa-th-large"></i>
         </a>
       </li>
+      @guest
+          <li class="nav-item">
+            <a class="nav-link" href="{{ route('login') }}">Login</a>
+          </li>
+          <li class="nav-item">
+            <!-- <a class="nav-link" href="{{ route('register-user') }}">Register</a> -->
+            <!-- <a class="nav-link" href="{{ route('users.create') }}">Register</a> -->
+          </li>
+          @else
+          <li class="nav-item">
+            <a class="nav-link" href="{{ route('signout') }}">Logout</a>
+          </li>
+          @endguest
     </ul>
   </nav>
   <!-- /.navbar -->
