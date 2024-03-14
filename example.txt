@@ -1,0 +1,24 @@
+
+zwarra.crm-doctor.com/app/Models
+models
+
+zwarra.crm-doctor.com/app/Http/Controllers
+
+/home2/bitechnosys/zwarra.crm-doctor.com/routes/api.php
+api end-points
+
+
+collection export file
+zwaara.postman_collection.json
+
+
+dr.a.e@outlook.com
+Aa12355Aa@@ 
+
+https://www.figma.com/file/tlV8I3GtSR91106hlDo1vm?locale=en&type=design
+Zawaara Medical Portal
+Created with Figma
+ 
+admin panel
+
+https://www.figma.com/file/fj96ymoMLbGbjGgK0yRjko?locale=en&type=design

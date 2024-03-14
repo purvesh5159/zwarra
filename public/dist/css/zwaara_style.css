@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+.poppins-thin {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+.poppins-extralight {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+.poppins-light {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+.poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.poppins-medium {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+.poppins-semibold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+.poppins-bold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+.poppins-extrabold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+}
+.poppins-black {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+.poppins-thin-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+}
+.poppins-extralight-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: italic;
+}
+.poppins-light-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+.poppins-regular-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+.poppins-medium-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+}
+.poppins-semibold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+}
+.poppins-bold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+.poppins-extrabold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: italic;
+}
+.poppins-black-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+}
+.zw_text_AF2245 {
+    color: #AF2245;
+}
+.zw_text_505F65{
+    color: #505F65;
+}
+.zw_text_111535 {
+    color: #111535;
+}
+.zw_text_333333 {
+    color: #333333;
+}
+.zw_text_252B42 {
+    color: #252B42;
+}
+.zw_text_9B9B9B {
+    color: #9B9B9B;
+}
+.zw_text_86909D {
+    color: #86909D;
+}
+.zw_text_002a56 {
+    color: #002a56;
+}
+.zw_text_000000 {
+    color: #000000;
+}
+.zw_text_ffffff {
+    color: white;
+}
+.zw_bg_gradient {
+    background-image: linear-gradient(90deg, #AF2245, #882767, #602d8a);
+}
+.zw_bg_ffffff {
+    background-color: white;
+}
+.zw_bg_AF2245 {
+    background-color: #AF2245;
+}
+.zw_bg_f7e9ec {
+    background-color: #f7e9ec;
+}
+.zw_11 {
+    font-size: 11px;
+}
+.zw_12 {
+    font-size: 12px;
+}
+.zw_14 {
+    font-size: 14px;
+}
+.zw_15 {
+    font-size: 15px;
+}
+.zw_16 {
+    font-size: 16px;
+}
+.zw_18 {
+    font-size: 18px;
+}
+.zw_20 {
+    font-size: 20px;
+}
+.zw_22 {
+    font-size: 22px;
+}
+.zw_24 {
+    font-size: 24px;
+}
+.zw_30 {
+    font-size: 30px;
+}
+.zw_32 {
+    font-size: 32px;
+}
+.zw_34 {
+    font-size: 34px;
+}
+.zw_46 {
+    font-size: 46px;
+}
+.zw_bor_radi_6{
+    border-radius: 6px;
+}
+.zw_add_btn{
+    background-color: #f7e9ec;
+    color: #AF2245;
+    border: 1px dashed #AF2245;
+}
+.zw_add_btn:hover{
+    background-color: #AF2245;
+    color: #f7e9ec;
+    border: 1px dashed #f7e9ec;
+}
+.zw_btn{
+    color : #ffffff;
+    background-color: #AF2245;
+    border: 1px dashed #AF2245;
+    border-radius: 6px;
+}
+.zw_btn:hover{
+    color : #ffffff;
+    background-color: #AF2245;
+    border: 1px dashed #AF2245;
+    border-radius: 6px;
+}
+.zw_brand{
+    padding: 0 15px;
+    width: 265px;
+    background: white;
+}
+.zw_brand .brand-link .brand-image {
+    float: none;
+    max-height: 100%;
+}
+.zw_brand .sidebar{
+    padding-left: 0;
+    padding-right: 0;
+ }
+.zw_borderbtm_CCCCCC{
+    border-bottom: 1px solid #CCCCCC;
+}
+.zw_sidebar .nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+    color: #AF2245;
+    background-color: #f7e9ec;
+}
+.zw_sidebar .nav-pills .nav-link:not(.active):hover{
+    color: #AF2245;
+}
+.zw_sidebar .nav-pills .nav-link{
+    color: #505F65;
+    background-color: #F6F7F9;
+}
+.zw_sidebar .content-wrapper{
+  margin-left: 265px!important;
+}
+.zw_sidebar .nav-treeview{
+    padding-left: 20px;
+}
+.zw_sidebar .form-check-input:checked{
+    background-color: #AF2245;
+    border-color: #AF2245;
+}
+.zw_sidebar .form-check-input {
+    width: 35px;
+    height: 20px 
+}
+.zw_sidebar .zw_box_shadow{
+    box-shadow: 5px 8px 32px rgb(0 0 0 / 10%);
+}
+.zw_sidebar .zw_card{
+    background-color: transparent ;
+    box-shadow: none;
+}
+.zw_pdf_btn{
+    background-color: #F6F7F9;
+    color: #AF2245;
+    border: 1px solid #F6F7F9;
+    border-radius: 6px;
+}
+.zw_pdf_btn:hover{
+    background-color: #F6F7F9;
+    color: #AF2245;
+    border: 1px solid #F6F7F9;
+    border-radius: 6px;
+}
+.zw_pdfbtn_bg{
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+

@@ -1,0 +1,16 @@
+
+create table
+
+php artisan make:migration create_posts_table
+php artisan make:migration create_posts_table --table=posts
+
+migrate table after added fields
+php artisan migrate --path=/database/migrations/2020_04_01_064006_create_posts_table.php
+
+
+
+create model and controller
+
+php artisan make:controller ServiceProviderController --resource --model=ServiceProvider
+
+php artisan serve
