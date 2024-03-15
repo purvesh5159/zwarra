@@ -9,7 +9,6 @@
         <!-- <span class="brand-text font-weight-light">Zwarra Admin Panel</span> -->
       </a>
       </li>
-      
     </ul>
 
     <!-- Right navbar links -->
