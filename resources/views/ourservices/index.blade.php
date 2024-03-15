@@ -11,29 +11,49 @@
       <section class="content-header">
         <div class="container-fluid">
           <div class="row mb-2">
+            <div class="col-sm-6 zw_back">
+              <a href="" class="poppins-medium zw_18 zw_text_333333 zw_a zw_back">
+                <i class="fas fa-arrow-left right mr-2"></i>Back
+              </a>
+            </div>
+          </div>
+          <div class="row mb-2">
             <div class="col-sm-6">
-              <h1>Our Services</h1>
+              <h1 class="poppins-semibold zw_46 zw_text_AF2245 mt-3">Our Services</h1>
             </div>
             <div class="col-sm-6">
-              <ol class="breadcrumb float-sm-right">
+              <!-- <ol class="breadcrumb float-sm-right">
                 <li class="breadcrumb-item"><a href="#">Home</a></li>
                 <li class="breadcrumb-item active"> Our Services</li>
-              </ol>
+              </ol> -->
             </div>
           </div>
         </div><!-- /.container-fluid -->
       </section>
       <!-- Content Header (Page header) -->
       <section class="content-header">
-        <div class="row">
-          <div class="col-12">
-            <a class="btn btn-success float-right m-2" href="{{ route('ourservices.create') }}">Add new main service</a>
+        <div class="row mb-2">
+          <div class="col-6">
+            <form class="zw_search_form ">
+              <div class="input-group input-group-sm">
+                <input type="text" name="table_search" class=" zw_search_input zw_16 poppins-regular" placeholder="Search">
+                <div class="input-group-append zw_input-group-append">
+                  <button type="submit" class="btn zw_search_button zw_bg_ffffff">
+                    <i class="fas fa-search"></i>
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="col-6">
+            <a class="btn zw_add_btn float-right  poppins-medium zw_18" href="{{ route('ourservices.create') }}"> <i class="fas fa-plus right mr-2"></i>Add new main service</a>
+            <!-- <a class="btn btn-success float-right m-2" href="{{ route('ourservices.create') }}">Add new main service</a> -->
           </div>
         </div>
         <div class="row">
           <div class="col-12">
             <div class="card">
-              <div class="card-header">
+              <!-- <div class="card-header">
                 <h3 class="card-title">Our Services </h3>
                 <div class="card-tools">
                   <div class="input-group input-group-sm" style="width: 150px;">
@@ -46,44 +66,44 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> -->
 
               @if ($message = Session::get('success'))
-              <div class="alert alert-success">
+              <div class="alert zw_alert_success">
                 <p>{{ $message }}</p>
               </div>
               @endif
               <!-- /.card-header -->
               <div class="card-body table-responsive p-0">
                 <table class="table table-hover text-nowrap">
-                  <thead>
+                  <thead class="zw_bg_AF2245 zw_text_ffffff">
                     <tr>
-                      <th>Image</th>
-                      <th>En Name</th>
-                      <th>Ar Name</th>
-                      <th>Status</th>
-                      <th>Reason</th>
+                      <th class="poppins-medium zw_18">Image</th>
+                      <th class="poppins-medium zw_18">En Name</th>
+                      <th class="poppins-medium zw_18">Ar Name</th>
+                      <th class="poppins-medium zw_18">Status</th>
+                      <th class="poppins-medium zw_18">Reason</th>
                     </tr>
                   </thead>
                   <tbody>
                     @foreach ($ourservices as $ourservices)
                     <tr>
-                      <td><img class="center-block" src="{{ asset($ourservices->Logo) }}" height="100px" width="100px" /></td>
-                      
-                      <td>{{ $ourservices->Enname }}</td>
-                      <td>{{ $ourservices->Arname }}</td>
-                       <td>
+                      <td class="poppins-regular zw_14 zw_text_333333"><img class="center-block" width="50px" height="" src="{{ asset($ourservices->Logo) }}" height="" width="50px" /></td>
+
+                      <td class="poppins-regular zw_14 zw_text_333333">{{ $ourservices->Enname }}</td>
+                      <td class="poppins-regular zw_14 zw_text_333333">{{ $ourservices->Arname }}</td>
+                      <td class="poppins-regular zw_14 zw_text_333333">
                         <div class="form-switch">
                           <input type="checkbox" class="form-check-input" id="site_state" style="cursor: pointer;">
                         </div>
                       </td>
-                      <td>
+                      <td class="poppins-regular zw_14 zw_text_333333">
                         <form action="{{ route('ourservices.destroy',$ourservices->id) }}" method="POST">
-                          <a class="btn btn-info" href="{{ route('ourservices.show',$ourservices->id) }}">Show</a>
+                          <a class="btn zw_btn" href="{{ route('ourservices.show',$ourservices->id) }}">Show</a>
                           @csrf
                           @method('DELETE')
 
-                          <button type="submit" class="btn btn-danger">Delete</button>
+                          <button type="submit" class="btn zw_btn">Delete</button>
                         </form>
                       </td>
                     </tr>
@@ -102,4 +122,5 @@
     @include('layouts.footer')
   </div>
 </body>
+
 </html>

@@ -11,12 +11,18 @@
       <section class="content-header">
         <div class="container-fluid">
           <div class="row mb-2">
+            <div class="col-sm-6 zw_back">
+              <a href="" class="poppins-medium zw_18 zw_text_333333 zw_a zw_back">
+                <i class="fas fa-arrow-left right mr-2"></i>Back
+              </a>
+            </div>
+          </div>
+          <div class="row mb-2">
             <div class="col-sm-6">
               <h1 class="poppins-semibold zw_46 zw_text_AF2245">Patient Registration</h1>
             </div>
             <div class="col-sm-6">
-            <a class="btn zw_add_btn float-right m-2 poppins-medium zw_18" href="{{ route('patientregistration.create') }}"> <i class="fas fa-plus right mr-2"></i>Add New Patient</a>
-
+              <a class="btn zw_add_btn float-right m-2 poppins-medium zw_18" href="{{ route('patientregistration.create') }}"> <i class="fas fa-plus right mr-2"></i>Add New Patient</a>
               <!-- <ol class="breadcrumb float-sm-right">
                 <li class="breadcrumb-item"><a href="#">Home</a></li>
                 <li class="breadcrumb-item active">Service Provider</li>
@@ -50,7 +56,7 @@
               </div> -->
 
               @if ($message = Session::get('success'))
-              <div class="alert alert-success">
+              <div class="alert zw_alert_success">
                 <p>{{ $message }}</p>
               </div>
               @endif
@@ -101,4 +107,5 @@
     @include('layouts.footer')
   </div>
 </body>
+
 </html>
