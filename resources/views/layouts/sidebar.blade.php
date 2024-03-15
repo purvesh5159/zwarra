@@ -2,7 +2,7 @@
  <aside class="main-sidebar zw_brand">
    <!-- Brand Logo -->
    <div class="zw_borderbtm_CCCCCC">
-     <a href="index3.html" class="brand-link">
+     <a href="{{ url('dashboard') }}" class="brand-link">
        <img src="dist/img/zwaara_logo.svg" alt="Zwaara Logo" class="brand-image ">
        <!-- <span class="brand-text font-weight-light">Zwarra Admin Panel</span> -->
      </a>
