@@ -11,8 +11,15 @@
       <section class="content-header">
         <div class="container-fluid">
           <div class="row mb-2">
+            <div class="col-sm-6 zw_back">
+              <a href="" class="poppins-medium zw_18 zw_text_333333 zw_a zw_back">
+              <i class="fas fa-arrow-left right mr-2"></i>Back
+              </a>
+            </div>
+          </div>
+          <div class="row">
             <div class="col-sm-6">
-              <h1 class="poppins-semibold zw_46 zw_text_AF2245">Service Provider</h1>
+              <h1 class="poppins-semibold zw_46 zw_text_AF2245 mt-3">Service Provider</h1>
             </div>
             <div class="col-sm-6">
             <a class="btn zw_add_btn float-right m-2 poppins-medium zw_18" href="{{ route('serviceproviders.create') }}"> <i class="fas fa-plus right mr-2"></i>Add new service provider</a>
@@ -50,7 +57,7 @@
               </div> -->
 
               @if ($message = Session::get('success'))
-              <div class="alert alert-success">
+              <div class="alert zw_alert_success">
                 <p>{{ $message }}</p>
               </div>
               @endif
@@ -73,7 +80,7 @@
                     @foreach ($serviceprovider as $serviceprovider)
                     <tr class="m-4">
                       <td class="poppins-regular zw_14 zw_text_333333">{{ $serviceprovider->CreatedAt }}</td>
-                      <td class="poppins-regular zw_14 zw_text_333333"><img class="center-block" src="{{ asset($serviceprovider->Logo_url) }}" height="" width="36px" /></td>
+                      <td class="poppins-regular zw_14 zw_text_333333"><img class="center-block" width="50px" height="" src="{{ asset($serviceprovider->Logo_url) }}" /></td>
                       <td class="poppins-regular zw_14 zw_text_333333">{{ $serviceprovider->Enname }}</td>
                       <td class="poppins-regular zw_14 zw_text_333333">{{ $serviceprovider->vat }}</td>
                       <td class="poppins-regular zw_14 zw_text_333333">{{ $serviceprovider->Email }}</td>
@@ -85,10 +92,12 @@
                       </td>
                       <td>
                         <form action="{{ route('serviceproviders.destroy',$serviceprovider->id) }}" method="POST">
-                          <a class="btn zw_btn" href="{{ route('serviceproviders.show',$serviceprovider->id) }}">Zone</a>
+                          <a class="btn zw_btn" href="{{ route('serviceproviders.show',$serviceprovider->id) }}">Show</a>
                           @csrf
                           @method('DELETE')
-                          <button type="submit" class="btn zw_btn">Service</button>
+                          <button type="submit" class="btn zw_btn">Delete</button>
+                          <a class="btn zw_text_AF2245 zw_a zw_24" href="{{ route('serviceproviders.show',$serviceprovider->id) }}"><i class="fa fa-edit" aria-hidden="true"></i> </a>
+                          <a class="btn zw_text_AF2245 zw_a zw_24" href="{{ route('serviceproviders.show',$serviceprovider->id) }}"><i class="fas fa-angle-down"></i> </a>
                         </form>
                       </td>
                     </tr>

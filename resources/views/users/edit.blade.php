@@ -39,28 +39,28 @@
                                     <div class="form-row">
                                         <div class="form-group col-md-6">
                                             <label for="exampleInputFirstname">Firstname</label>
-                                            <input type="text" name="Firstname" value="{{ $user->Firstname }}" class="form-control" id="exampleInputErname" placeholder="Enter er name">
+                                            <input type="text" name="Firstname" value="{{ $user->name }}" class="form-control" id="exampleInputErname" placeholder="Enter er name">
                                         </div>
                                         <div class="form-group col-md-6">
                                             <label for="exampleInputLastname">Lastname</label>
-                                            <input type="text" name="Lastname" value="{{ $user->Lastname }}" class="form-control" id="exampleInputarname" placeholder="Enter ar name">
+                                            <input type="text" name="Lastname" value="{{ $user->lastname }}" class="form-control" id="exampleInputarname" placeholder="Enter ar name">
                                         </div>
                                     </div>
                                     <div class="form-row">
                                     <div class="form-group col-md-6">
                                             <label for="exampleInputEmail1">Email </label>
-                                            <input type="email" name="Email" value="{{ $user->Email }}" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                                            <input type="email" name="Email" value="{{ $user->email }}" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
                                         </div>
                                         <div class="form-group col-md-6">
                                             <label for="exampleInputphone">Phone</label>
-                                            <input type="phone" name="Phone" value="{{ $user->Phone }}" class="form-control" id="exampleInputphone" placeholder="Enter phone">
+                                            <input type="phone" name="Phone" value="{{ $user->phone }}" class="form-control" id="exampleInputphone" placeholder="Enter phone">
                                         </div>
                                     </div>
                                     <div class="form-row">
                                         <div class="form-group col-md-6">
                                             <label for="exampleInputcity">Select city</label>
                                             <select name="City" class="custom-select">
-                                            <option value="{{ $user->City }}" selected="selected">{{ $user->City }}</option>
+                                            <option value="{{ $user->city }}" selected="selected">{{ $user->city }}</option>
                                                 <option>option 1</option>
                                                 <option>option 2</option>
                                                 <option>option 3</option>

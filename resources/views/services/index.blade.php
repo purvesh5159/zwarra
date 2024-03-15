@@ -11,29 +11,41 @@
       <section class="content-header">
         <div class="container-fluid">
           <div class="row mb-2">
+            <div class="col-sm-6 zw_back">
+              <a href="#" class="poppins-medium zw_18 zw_text_333333 zw_a zw_back">
+                <i class="fas fa-arrow-left right mr-2"></i>Back
+              </a>
+
+            </div>
+          </div>
+          <div class="row mb-2">
             <div class="col-sm-6">
-              <h1>Services</h1>
+              <h1 class="poppins-semibold zw_46 zw_text_AF2245 mt-3">Service</h1>
+
+              <!-- <h1>Services</h1> -->
             </div>
             <div class="col-sm-6">
-              <ol class="breadcrumb float-sm-right">
+              <a class="btn zw_add_btn float-right m-2 poppins-medium zw_18" href="{{ route('services.create') }}"> <i class="fas fa-plus right mr-2"></i>Add new service</a>
+
+              <!-- <ol class="breadcrumb float-sm-right">
                 <li class="breadcrumb-item"><a href="#">Home</a></li>
                 <li class="breadcrumb-item active">Services</li>
-              </ol>
+              </ol> -->
             </div>
           </div>
         </div><!-- /.container-fluid -->
       </section>
       <!-- Content Header (Page header) -->
       <section class="content-header">
-        <div class="row">
+        <!-- <div class="row">
           <div class="col-12">
             <a class="btn btn-success float-right m-2" href="{{ route('services.create') }}">Add new service</a>
           </div>
-        </div>
+        </div> -->
         <div class="row">
           <div class="col-12">
             <div class="card">
-              <div class="card-header">
+              <!-- <div class="card-header">
                 <h3 class="card-title">Service data</h3>
                 <div class="card-tools">
                   <div class="input-group input-group-sm" style="width: 150px;">
@@ -46,45 +58,46 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> -->
 
               @if ($message = Session::get('success'))
-              <div class="alert alert-success">
+              <div class="alert zw_alert_success">
                 <p>{{ $message }}</p>
               </div>
               @endif
               <!-- /.card-header -->
               <div class="card-body table-responsive p-0">
                 <table class="table table-hover text-nowrap">
-                  <thead>
+                  <thead class="zw_bg_AF2245 zw_text_ffffff">
                     <tr>
-                      <th>Name</th>
-                      <th>New Price</th>
-                      <th>Service Type</th>
-                      <th>Gender</th>
-                      <th>Status</th>
-                      <th>Reason</th>
+                      <th class="poppins-medium zw_18">Name</th>
+                      <th class="poppins-medium zw_18">New Price</th>
+                      <th class="poppins-medium zw_18">Service Type</th>
+                      <th class="poppins-medium zw_18">Gender</th>
+                      <th class="poppins-medium zw_18">Status</th>
+                      <th class="poppins-medium zw_18">Reason</th>
                     </tr>
                   </thead>
                   <tbody>
                     @foreach ($service as $service)
                     <tr>
-                      <td>{{ $service->Enhealthcare }}</td>
-                      <td>{{ $service->Newprice }}</td>
-                      <td></td>
-                      <td>{{ $service->Gender }}</td>
-                      <td>
+                      <td class="poppins-regular zw_14 zw_text_333333">{{ $service->Enhealthcare }}</td>
+                      <td class="poppins-regular zw_14 zw_text_333333">{{ $service->Newprice }}</td>
+                      <td class="poppins-regular zw_14 zw_text_333333"></td>
+                      <td class="poppins-regular zw_14 zw_text_333333">{{ $service->Gender }}</td>
+                      <td class="poppins-regular zw_14 zw_text_333333">
                         <div class="form-switch">
                           <input type="checkbox" class="form-check-input" id="site_state" style="cursor: pointer;">
                         </div>
                       </td>
-                      <td>
+                      <td class="poppins-regular zw_14 zw_text_333333">
                         <form action="{{ route('services.destroy',$service->id) }}" method="POST">
-                          <a class="btn btn-info" href="{{ route('services.show',$service->id) }}">Show</a>
+                          <a class="btn zw_btn" href="{{ route('services.show',$service->id) }}">Show</a>
                           @csrf
                           @method('DELETE')
 
-                          <button type="submit" class="btn btn-danger">Delete</button>
+                          <button type="submit" class="btn zw_btn">Delete</button>
+                          <a class="btn zw_text_AF2245 zw_a zw_24" href="{{ route('services.show',$service->id) }}"><i class="fa fa-edit" aria-hidden="true"></i> </a>
                         </form>
                       </td>
                     </tr>
@@ -103,4 +116,5 @@
     @include('layouts.footer')
   </div>
 </body>
+
 </html>

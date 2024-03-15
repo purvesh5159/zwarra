@@ -33,33 +33,48 @@
               </div>
               @endif
               <!-- form start -->
-              <form action="{{ route('users.store') }}" method="POST" enctype="multipart/form-data">
+              <form action="{{ route('register.custom') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="card-body">
                   <div class="form-row">
                     <div class="form-group col-md-6">
-                      <label for="exampleInputFirstname">Firstname</label>
-                      <input type="text" name="Firstname" class="form-control" id="exampleInputFirstname" placeholder="Enter Firstname">
+                      <label for="exampleInputFirstname">Firstname <span style="color: red;">*</span></label>
+                      <input type="text" placeholder="Name" id="name" class="form-control" name="name" required autofocus>
+                      @if ($errors->has('name'))
+                      <span class="text-danger">{{ $errors->first('name') }}</span>
+                      @endif
                     </div>
                     <div class="form-group col-md-6">
                       <label for="exampleInputLastname">Lastname <span style="color: red;">*</span></label>
-                      <input type="text" name="Lastname" class="form-control" id="exampleInputLastname" placeholder="Enter Lastname">
+                      <input type="text" name="lastname" class="form-control" id="exampleInputLastname" placeholder="Enter Lastname">
                     </div>
                   </div>
                   <div class="form-row">
                     <div class="form-group col-md-6">
                       <label for="exampleInputEmail">Email address <span style="color: red;">*</span></label>
-                      <input type="email" name="Email" class="form-control" id="exampleInputEmail" placeholder="Enter email">
+                      <input type="text" placeholder="Email" id="email_address" class="form-control" name="email" required autofocus>
+                      @if ($errors->has('email'))
+                      <span class="text-danger">{{ $errors->first('email') }}</span>
+                      @endif
                     </div>
                     <div class="form-group col-md-6">
                       <label for="exampleInputPhone">Phone <span style="color: red;">*</span></label>
-                      <input type="phone" name="Phone" class="form-control" id="exampleInputPhone" placeholder="Enter phone">
+                      <input type="phone" name="phone" class="form-control" id="exampleInputPhone" placeholder="Enter phone">
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="exampleInputPassword">Password <span style="color: red;">*</span></label>
+                      <input type="password" placeholder="Password" id="password" class="form-control" name="password" required>
+                      @if ($errors->has('password'))
+                      <span class="text-danger">{{ $errors->first('password') }}</span>
+                      @endif
                     </div>
                   </div>
                   <div class="form-row">
                     <div class="form-group col-md-6">
                       <label for="exampleInputcity">Select City <span style="color: red;">*</span></label>
-                      <select name="City" class="custom-select">
+                      <select name="city" class="custom-select">
                         <option>option 1</option>
                         <option>option 2</option>
                         <option>option 3</option>
