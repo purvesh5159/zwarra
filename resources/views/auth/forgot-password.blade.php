@@ -34,38 +34,30 @@
                         <h3 class="poppins-bold zw_30 zw_text_333333">Login</h3>
                         <p class="poppins-regular zw_18 zw_text_000000">For the purpose of industry regulation,your details are required.</p>
                         <div class="zw_divider"></div>
+                        @if ($errors->any())
+                            <div>
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                            @endif
+
+                            @if (session('status'))
+                            <div>{{ session('status') }}</div>
+                            @endif
                         <div class="card-body p-0">
-                            <form method="POST" action="{{ route('login.custom') }}">
+                            <form method="POST" action="{{ route('password.email') }}">
                                 @csrf
                                 <div class="form-group mb-4 mt-3">
                                     <label class="zw_poppins_regular poppins-regular zw_18 zw_text_333333" for="email">Email</label>
-                                    <input type="text" placeholder="Email" id="email" class="form-control poppins-regular zw_18 zw_text_333333 zw_login_form_control" name="email" required autofocus>
+                                    <input type="email" id="email" name="email" value="{{ old('email') }}" placeholder="Email" class="form-control poppins-regular zw_18 zw_text_333333 zw_login_form_control" required autofocus>
                                 </div>
-
-                                <div class="form-group mb-4 ">
-                                    <label class="zw_poppins_regular poppins-regular zw_18 zw_text_333333" for="password">Password</label>
-                                    <input type="password" placeholder="Password" id="password" class="form-control poppins-regular zw_18 zw_text_333333 zw_login_form_control" name="password" required>
-
-                                    @if ($errors->has('emailPassword'))
-                                    <span class="text-danger">{{ $errors->first('emailPassword') }}</span>
-                                    @endif
-                                </div>
-
-                                <!-- <div class="form-group mb-3">
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" name="remember"> Remember Me
-                                    </label>
-                                </div>
-                            </div> -->
 
                                 <div class="d-grid mx-auto pt-3">
-                                    <button type="submit" class="btn zw_btn btn-block p-2">Login</button>
+                                    <button type="submit" class="btn zw_btn btn-block p-2">Send Code</button>
                                 </div>
-
-                                <center><a href="{{ route('forgot.password') }}">
-                                        Forgot Your Password?
-                                    </a></center>
                             </form>
 
                         </div>

@@ -19,6 +19,7 @@ use App\Http\Controllers\BookingsController;
 use App\Http\Controllers\BankingsController;
 use App\Http\Controllers\ContactsController;
 use App\Http\Controllers\ComplaintsController;
+use App\Http\Controllers\ForgotPasswordController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,7 +33,7 @@ use App\Http\Controllers\ComplaintsController;
 */
 
 
-Route::get('/', [CustomAuthController::class, 'index'])->name('login');
+Route::get('/', [CustomAuthController::class, 'index'])->name('user.login');
 Route::get('dashboard', [CustomAuthController::class, 'dashboard']); 
 Route::get('login', [CustomAuthController::class, 'index'])->name('login');
 Route::post('custom-login', [CustomAuthController::class, 'customLogin'])->name('login.custom'); 
@@ -65,6 +66,15 @@ Route::resource('bookings', BookingsController::class);
 Route::resource('bankings', BankingsController::class);
 Route::resource('contacts', ContactsController::class);
 Route::resource('complaints', ComplaintsController::class);
+Route::get('forgot-password', [ForgotPasswordController::class, 'showForgotPasswordForm'])->name('forgot.password');
+Route::post('forgot-password', [ForgotPasswordController::class, 'sendOTP'])->name('password.email');
+Route::get('verify-otp', [ForgotPasswordController::class, 'showOTPVerificationForm'])->name('verify.otp');
+Route::post('verify-otp', [ForgotPasswordController::class, 'verifyOTP'])->name('password.reset');
+Route::get('reset-password', [ForgotPasswordController::class, 'showResetPasswordForm'])->name('reset.password');
+Route::post('reset-password', [ForgotPasswordController::class, 'resetPassword'])->name('password.update');
+Route::post('reset-otp', [ForgotPasswordController::class, 'resendOTP'])->name('resend.otp');
+
+
 
 
 

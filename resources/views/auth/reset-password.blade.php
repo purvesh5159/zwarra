@@ -2,10 +2,8 @@
 
 <body class="hold-transition sidebar-mini zw_sidebar zw_login_form">
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"> -->
-
-
     <main class="login-form ">
-        <!-- Login -->
+        <!-- Create New Password -->
         <div class="container-fluid">
             <div class="row justify-content-center">
                 <div class="col-lg-5 col-md-6 col-sm-6 zw_login_rightbar">
@@ -31,43 +29,45 @@
                 </div>
                 <div class="col-lg-7 col-md-6 col-sm-6 zw_bg_f6f6f6">
                     <div class="card zw_login_card zw_login_mtb zw_bg_f6f6f6">
-                        <h3 class="poppins-bold zw_30 zw_text_333333">Login</h3>
-                        <p class="poppins-regular zw_18 zw_text_000000">For the purpose of industry regulation,your details are required.</p>
+                        <h3 class="poppins-bold zw_30 zw_text_333333">Create New Password</h3>
+                        <p class="poppins-regular zw_18 zw_text_000000">Create your new password to login</p>
                         <div class="zw_divider"></div>
+                        <center>
+                            @if ($errors->any())
+                            <div>
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                            @endif
+
+                            @if (session('status'))
+                            <div>{{ session('status') }}</div>
+                            @endif
+                        </center>
                         <div class="card-body p-0">
-                            <form method="POST" action="{{ route('login.custom') }}">
+                            <form method="POST" action="{{ route('password.update') }}">
                                 @csrf
+                                <input type="hidden" id="email" name="email" value="{{ $email ?? old('email') }}" required autofocus>
                                 <div class="form-group mb-4 mt-3">
-                                    <label class="zw_poppins_regular poppins-regular zw_18 zw_text_333333" for="email">Email</label>
-                                    <input type="text" placeholder="Email" id="email" class="form-control poppins-regular zw_18 zw_text_333333 zw_login_form_control" name="email" required autofocus>
-                                </div>
-
-                                <div class="form-group mb-4 ">
-                                    <label class="zw_poppins_regular poppins-regular zw_18 zw_text_333333" for="password">Password</label>
+                                    <label class="zw_poppins_regular poppins-regular zw_18 zw_text_333333" for="createPassword">Create Password</label>
                                     <input type="password" placeholder="Password" id="password" class="form-control poppins-regular zw_18 zw_text_333333 zw_login_form_control" name="password" required>
+                                    <!-- for error -->
+                                    <span class="text-danger"></span>
 
-                                    @if ($errors->has('emailPassword'))
-                                    <span class="text-danger">{{ $errors->first('emailPassword') }}</span>
-                                    @endif
                                 </div>
-
-                                <!-- <div class="form-group mb-3">
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" name="remember"> Remember Me
-                                    </label>
+                                <div class="form-group mb-4 ">
+                                    <label class="zw_poppins_regular poppins-regular zw_18 zw_text_333333" for="confirmPassword">Confirm Password</label>
+                                    <input type="password" placeholder="Password" id="password_confirmation" class="form-control poppins-regular zw_18 zw_text_333333 zw_login_form_control" name="password_confirmation" required>
+                                    <!-- for error -->
+                                    <span class="text-danger"></span>
                                 </div>
-                            </div> -->
-
                                 <div class="d-grid mx-auto pt-3">
-                                    <button type="submit" class="btn zw_btn btn-block p-2">Login</button>
+                                    <button type="submit" class="btn zw_btn btn-block p-2">Create Password</button>
                                 </div>
-
-                                <center><a href="{{ route('forgot.password') }}">
-                                        Forgot Your Password?
-                                    </a></center>
                             </form>
-
                         </div>
                     </div>
                 </div>
